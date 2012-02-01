@@ -1,0 +1,10 @@
+This gem gives you rake tasks to generate scaffolds/models from Umbrello .xmi files.
+
+1. Make new Entity Relationship Diagram in Umbrello. Place there your database structure. Be sure, that you using types like rails generators. If table have 'id' column diagram it will be treated as scaffold, else as model, ie. tables for man_many through associations.
+2. Make new rails project
+3. Use rake task to generate scaffolds
+
+	rake umbrello:scaffold path/to/file.xmi # Tables with 'id' as scaffolds, rest as models
+	rake umbrello:model path/to/file.xmi # All tables as models
+
+Done
