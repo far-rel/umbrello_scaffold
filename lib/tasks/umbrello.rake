@@ -1,11 +1,11 @@
 namespace :umbrello do
   
   task :model do
-    UmbrelloScaffold::Parser.new(args[0]).parse(false, args[1..(args.size)])
+    UmbrelloScaffold::Parser.new(ARGV[1]).parse(false, *ARGV[2..(ARGV.size)])
   end
   
   task :scaffold do
-    UmbrelloScaffold::Parser.new(args[0]).parse(true, args[1..(args.size)])
+    UmbrelloScaffold::Parser.new(ARGV[1]).parse(true, *ARGV[2..(ARGV.size)])
   end
   
 end
