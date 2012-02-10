@@ -34,7 +34,7 @@ module UmbrelloScaffold
         end
         what =  (scaffolds && is_id) ? 'scaffold' : 'model'
         
-        system "rails generate #{what} #{name} #{attrs.join ' '} #{args.join ' '}"
+        system "rails generate #{what} #{name.singularize} #{attrs.join ' '} #{args.join ' '}"
       end
     end
 
